@@ -2,7 +2,7 @@
 {% load crispy_forms_tags%}
 
 {% block content %}
-    <div>
+    <div class="shadow p-3 mb-5 bg-white rounded">
         <form method = "POST">
             {% csrf_token %}
             <fieldset class="form-group">
@@ -16,8 +16,8 @@
 
         <div class="border-top pt-3">
             <small class="text-muted">
-                Already have an account
-                <a href="{% url 'login' %}" class="ml-2">Sign In</a>
+                Already have an account?
+                <a href="{% url 'login' %}" class="ml-1">Sign In</a>
             </small>
         </div>
     </div>
