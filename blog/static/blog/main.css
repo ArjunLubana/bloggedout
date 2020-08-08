@@ -1,0 +1,24 @@
+*{
+    font-family: "Baloo Tamma 2", sans-serif;
+}
+
+.blog-container{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.side-nav{
+    align-self: flex-start;
+    margin:0 2.5rem 0 5rem;
+    width:30rem;
+}
+
+.post{
+
+}
+
+@media( max-width:1000px){
+    .side-nav{
+        display: none;
+    }
+}

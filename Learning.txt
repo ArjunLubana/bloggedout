@@ -1,0 +1,74 @@
+                                        DJANGO
+-------------------------------------------------------------------------------
+
+- A python web framework
+- It implements the MVC model in web programming
+- Modal are everything that happens in backend i.e Database management, receiving and responding to requests.
+- Views is everything visual that is rendered to the user
+- Controller is what interfaces the view and the modal. when a user requests a page, the request is sent to the controller which in turn routes it to the modal
+  The modal handles the request by fetching the view with a response.
+
+ROUTING
+
+- In django, routing takes place in two phases. The main router is your main app. 
+    The app created when you run; 
+        
+        $django-admin startproject <projectName>
+
+    This initialises a new project and create a django main app of your project.
+    The main app handles all the main routes of your project
+
+- The second part is routing the requests too your various apps in your project
+    To make an app, run the command; 
+        
+        $ python manage.py startapp <appName>
+    
+    This is when you make all of your apps for rendering html
+
+The urls.py handles all routing between apps
+The views.py contains responses for various requests
+The settings.py contains all your settings
+The apps.py contains all your app and app name (This should be added to settings.py under installed apps)
+
+TEMPLATES
+
+- You can render HTML templates
+- You can render HTML or create a base.html
+- Use extends to inherit from base.html
+- You create a template directory inside your blog app (Apps)
+- Inside the templates dir, we created a folder named as your app.
+- With the template ready, we add an apps configuration inside the settings.py
+- Inside the views, from django shortcuts. Use the render function to render the 
+  html file.
+- The render function still returns a HTTP response.
+- We can pass context into our render function.
+
+TEMPLATE INHERINTANCE
+
+- Making a base html with markup that is shared between all pages.
+- Use Url tag to go to a directory.
+- To load static, add a block on base html file to load static
+
+URL MAPPING
+
+- Django really simplifies url mapping.
+
+- You can do url mapping in two way. 
+    1. By creating your own urls.py to map your views to the main app
+    2. By importing directly to the main app urls.py. NB: This only maps a single url hence reduces 
+
+  For app with multiple views to map, use an independent urls.py file to map all urls.
+
+DATABASES
+
+- Databases are handled with models.py in django.
+- Models are first defined in a models.py file as a class with its name as the name of the model you want for your database
+- All attributes in the class are the data stored inside the model.
+- Django keeps track of all models after registering the app to the settings.py
+- Foreign Key: A table(model) using a foreign key depends on another table and data can only be created by that table with the primary key.
+- The data with the primary key can instantiate data inside the foreign key table to avoid IntegrityError.
+
+
+LOGIN AND AUTHENTICATION
+
+- 
