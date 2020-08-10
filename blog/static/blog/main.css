@@ -12,12 +12,9 @@
     margin:0 2.5rem 0 5rem;
     width:30rem;
 }
-.content-section{
-    display: flex;
-    align-items:center;
-}
 .media{
     width:5rem;
+    height:5rem;
 }
 .account-heading{
     margin: 2rem 0 0 0;

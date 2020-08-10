@@ -1,0 +1,24 @@
+<!-- Template Inheritance -->
+{% extends 'blog/base.html' %}
+
+{%block content%}
+    <div class="container-fluid">
+        <div class="shadow p-3 mb-5 bg-white rounded ">
+            <!-- <img class="rounded-circle" src="{{ post.author.profile.image.url }}" alt="profile_picture"> -->
+            <div class="">
+                <h1>{{ object.title }}</h1>
+                <small>By {{ object.author }} on {{object.date_posted}}</small>
+     
+            </div>
+            <div class="">
+                <p>{{object.content}}</p>
+            </div>
+            <div>
+                {% if object.author == user %}
+                <a class="btn btn-secondary btn-sm mt-1 mb-1"href="{% url 'post-update' object.id %}">Update</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1"href="{% url 'post-delete' object.id %}">Delete</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content%}
