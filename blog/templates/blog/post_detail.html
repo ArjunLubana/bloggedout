@@ -7,8 +7,8 @@
             <!-- <img class="rounded-circle" src="{{ post.author.profile.image.url }}" alt="profile_picture"> -->
             <div class="">
                 <h1>{{ object.title }}</h1>
-                <small>By {{ object.author }} on {{object.date_posted}}</small>
-     
+                <small>By <a href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a> on {{ object.date_posted| date:"F d y" }}</small>
+
             </div>
             <div class="">
                 <p>{{object.content}}</p>
